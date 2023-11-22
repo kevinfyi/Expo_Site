@@ -1,7 +1,8 @@
 
 
 nav{
-    display: flex;
+    display: flex-start;
+    flex-direction: column;
     justify-content: center;
     height: 50px;
     background-color: aqua;
