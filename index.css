@@ -1,11 +1,14 @@
 
-body{
-    background-color: blue;
-}
 
 nav{
     display: flex;
     justify-content: center;
     height: 50px;
     background-color: aqua;
+
+}
+
+nav-brand img{
+    display: block;
+    height: 10px;
 }
