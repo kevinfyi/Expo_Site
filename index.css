@@ -107,7 +107,7 @@
   
   
   /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> GLOBAL <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-  /* ********** Root Global Styles ********** */
+  /* ********** Root Styles ********** */
   /* Path: html, body */
   
   :root {
@@ -123,7 +123,7 @@
   }
   
   
-  /* ********** Global HTML and Body Styles ********** */
+  /* ********** HTML and Body Styles ********** */
   /* Path: html, body */
   /* Description: Base styles applied to the entire HTML document and the body. */
   html { 
@@ -186,19 +186,69 @@
 }
 
 .nav-burger span { 
-  background-color: currentcolor; 
+  background-color: currentColor; 
   display: block; 
   height: 1px; 
   left: calc(50% - 8px); 
   position: absolute; 
   transform-origin: center; 
-  transition-duration: 86ms; 
   transition-property: background-color, opacity, transform; 
   transition-timing-function: ease-out; width: 16px; 
+  transition-duration: 100ms; 
 }
 
 
+.nav-burger span:nth-child(1) {
+  top: calc(50% - 6px);
+}
+  
+.nav-burger span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+  
+  .nav-burger span:nth-child(3) {
+    top: calc(50% + 4px);
+  }
+  
+.nav-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+  
+.nav-burger.is-active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+  
+.nav-burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
 
+.nav-burger.is-active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.nav-item,
+.nav-link {
+  color: #4a4a4a;
+  display: block;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
+.nav-item .icon:only-child,
+.nav-link .icon:only-child {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
+a.nav-item,
+.nav-link {
+  cursor: pointer;
+}
 
 
 
