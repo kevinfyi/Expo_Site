@@ -172,11 +172,6 @@
     z-index: 30;
 }
 
-.nav-brand img{
-    display: block;
-    height: 10px;
-}
-
 .nav .nav-brand > a.nav-item:focus, 
 .nav .nav-brand > a.nav-item:hover, 
 .nav .nav-brand > a.nav-item.is-active, 
@@ -187,8 +182,8 @@
   color: #0a0a0a; 
 }
 
-.navbar-burger span { 
-  background-color: currentColor; 
+.nav-burger span { 
+  background-color: currentcolor; 
   display: block; 
   height: 1px; 
   left: calc(50% - 8px); 
@@ -199,11 +194,15 @@
   transition-timing-function: ease-out; width: 16px; 
 }
 
-img,
-video {
+img {
+  display: inline-block;
   height: auto;
   max-width: 100%;
 }
+
+
+
+
 
 
 
