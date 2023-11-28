@@ -156,6 +156,9 @@
   /* ********** Container Styles ********** */
   
   /* ********** Image and Icon Styles ********** */
+  img {
+    display: inline-block;
+  }
   
   /* ********** Header Styling ********** */
   
@@ -194,11 +197,6 @@
   transition-timing-function: ease-out; width: 16px; 
 }
 
-img {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-}
 
 
 
