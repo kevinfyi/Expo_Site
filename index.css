@@ -1,11 +1,236 @@
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Reset and Normalize <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 
+/* Universal box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Reset margins, paddings and borders */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* HTML5 display-role reset */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  
+  /* List style reset */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* Blockquote and quotes reset */
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  /* Table reset */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Additional resets and common stylings */
+  img, video {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Form element reset */
+  input, button, textarea, select {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: inherit;
+  }
+  
+  /* Remove default link styling */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Heading margins */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+  }
+  
+  /* Ensure iframes don't have a border */
+  iframe {
+    border: none;
+  }
+  
+  /* Ensure body uses the default style settings */
+  body {
+    font-family: sans-serif;
+    line-height: 1;
+  }
+  
+  /* Ensure consistent outline for focusable elements */
+  :focus {
+    outline: 2px solid blue;
+  }
+  
+  /* Handle HTML5 hidden attribute */
+  [hidden] {
+    display: none;
+  }
+  
+  
+  /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> GLOBAL <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+  /* ********** Root Global Styles ********** */
+  /* Path: html, body */
+  
+  :root {
+    --green: #27ae60;
+    --blue: #3498db;
+    --yellow: #f7af15;
+    --red: #e74c3c;
+    --orange: #fe5722;
+    --purple: #9b27af;
+    --gray: #747681;
+    --black: #333;
+    --font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  }
+  
+  
+  /* ********** Global HTML and Body Styles ********** */
+  /* Path: html, body */
+  /* Description: Base styles applied to the entire HTML document and the body. */
+  html { 
+    background-color: #ffffff;
+    font-size: 16px; 
+    -moz-osx-font-smoothing: grayscale; 
+    -webkit-font-smoothing: antialiased; 
+    min-width: 300px; 
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    text-rendering: optimizeLegibility; 
+    -webkit-text-size-adjust: 100%; 
+    -moz-text-size-adjust: 100%; 
+    text-size-adjust: 100%; 
+  }
+  
+  body { 
+    color: #141c3a; 
+    font-size: 1em; 
+    font-weight: 400; 
+    line-height: 1.5; 
+  }
+  
+  body, button, input, optgroup, select, textarea { 
+    font-family: "europa", sans-serif; 
+  }
+  
+  /* ********** Global Anchor and Button Styling ********** */
+  
+  /* ********** Container Styles ********** */
+  
+  /* ********** Image and Icon Styles ********** */
+  
+  /* ********** Header Styling ********** */
+  
+  /* ********** Section Styling ********** */
+  
+  /* ********** Footer Styling ********** */
+  
+  /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+  
+  
+  
+  Grid System /*For layout structure, like Flexbox or CSS Grid. */
+  
+  Typography Rules /*Font-family, font-size, line-height, and text-align. */
+  
+  Colors /*Primary and secondary color variables. */
+  
+  Buttons /*Styles for different button states (hover, active). */
+  
+  Forms /*Input, textarea, select, and label styling. */
+  
+  Navigation Bars /*Horizontal or vertical navigation styling. */
+  
+  Containers and Wrappers /*For content layout. */
+  
+  Spacing Utilities /*Margin and padding classes. */
+  
+  Media Queries /*For responsive design. */
+  
+  Animations /*Keyframes and transition properties. */
+  
+  Hover Effects /*For links, buttons, etc. */
+  
+  Lists /*Style for ordered and unordered lists. */
+  
+  Tables /*Basic styling for tables. */
+  
+  Borders /*Border styles and border-radius for rounded corners. */
+  
+  Flexbox Utilities /*For aligning and distributing space among items. */
+  
+  Backgrounds /*Background color, images, and gradients. */
+  
+  Positioning /*Relative, absolute, fixed positioning. */
+  
+  Icons /*Integration and styling of icon fonts or SVG icons. */
+  
+  Alerts and Messages /*Styling for error, warning, and information messages. */
+  
+  Tooltips /*CSS for hover text hints. */
+  
+  Modals /*Styling for pop-up modals/dialogs. */
+  
+  Breadcrumbs /*Styling for navigational breadcrumbs. */
+  
+  Pagination /*CSS for pagination links. */
+  
+  Cards /*Design for content cards with image, text, etc. */
+  
+  Image_ Galleries /*Styles for image layouts. */
+  
+  Sliders/Carousels /*Styling for image sliders. */
+  
+  Tabs /*Styles for tabbed content navigation. */
+  
+  Accordions /*Styles for collapsible content panels. */
+  
+  Progress_ Bars /*Styles for linear progress indicators. */
 
 nav{
     display: flex-start;
     flex-direction: column;
     justify-content: center;
     height: 50px;
-    background-color: aqua;
+    background-color: white;
 
 }
 
