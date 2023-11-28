@@ -164,77 +164,87 @@
   /* ********** Footer Styling ********** */
   
   /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-  
-  
-  
-  Grid System /*For layout structure, like Flexbox or CSS Grid. */
-  
-  Typography Rules /*Font-family, font-size, line-height, and text-align. */
-  
-  Colors /*Primary and secondary color variables. */
-  
-  Buttons /*Styles for different button states (hover, active). */
-  
-  Forms /*Input, textarea, select, and label styling. */
-  
-  Navigation Bars /*Horizontal or vertical navigation styling. */
-  
-  Containers and Wrappers /*For content layout. */
-  
-  Spacing Utilities /*Margin and padding classes. */
-  
-  Media Queries /*For responsive design. */
-  
-  Animations /*Keyframes and transition properties. */
-  
-  Hover Effects /*For links, buttons, etc. */
-  
-  Lists /*Style for ordered and unordered lists. */
-  
-  Tables /*Basic styling for tables. */
-  
-  Borders /*Border styles and border-radius for rounded corners. */
-  
-  Flexbox Utilities /*For aligning and distributing space among items. */
-  
-  Backgrounds /*Background color, images, and gradients. */
-  
-  Positioning /*Relative, absolute, fixed positioning. */
-  
-  Icons /*Integration and styling of icon fonts or SVG icons. */
-  
-  Alerts and Messages /*Styling for error, warning, and information messages. */
-  
-  Tooltips /*CSS for hover text hints. */
-  
-  Modals /*Styling for pop-up modals/dialogs. */
-  
-  Breadcrumbs /*Styling for navigational breadcrumbs. */
-  
-  Pagination /*CSS for pagination links. */
-  
-  Cards /*Design for content cards with image, text, etc. */
-  
-  Image_ Galleries /*Styles for image layouts. */
-  
-  Sliders/Carousels /*Styling for image sliders. */
-  
-  Tabs /*Styles for tabbed content navigation. */
-  
-  Accordions /*Styles for collapsible content panels. */
-  
-  Progress_ Bars /*Styles for linear progress indicators. */
 
-nav{
+.nav-main{
     display: flex-start;
     flex-direction: column;
     justify-content: center;
-    height: 50px;
+    min-height: 3.25rem;
     background-color: white;
-
+    position: relative;
+    z-index: 30;
 }
 
-nav-brand img{
+
+.nav-brand img{
     display: block;
     height: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+Grid System /*For layout structure, like Flexbox or CSS Grid. */
+  
+Typography Rules /*Font-family, font-size, line-height, and text-align. */
+
+Colors /*Primary and secondary color variables. */
+
+Buttons /*Styles for different button states (hover, active). */
+
+Forms /*Input, textarea, select, and label styling. */
+
+Navigation Bars /*Horizontal or vertical navigation styling. */
+
+Containers and Wrappers /*For content layout. */
+
+Spacing Utilities /*Margin and padding classes. */
+
+Media Queries /*For responsive design. */
+
+Animations /*Keyframes and transition properties. */
+
+Hover Effects /*For links, buttons, etc. */
+
+Lists /*Style for ordered and unordered lists. */
+
+Tables /*Basic styling for tables. */
+
+Borders /*Border styles and border-radius for rounded corners. */
+
+Flexbox Utilities /*For aligning and distributing space among items. */
+
+Backgrounds /*Background color, images, and gradients. */
+
+Positioning /*Relative, absolute, fixed positioning. */
+
+Icons /*Integration and styling of icon fonts or SVG icons. */
+
+Alerts and Messages /*Styling for error, warning, and information messages. */
+
+Tooltips /*CSS for hover text hints. */
+
+Modals /*Styling for pop-up modals/dialogs. */
+
+Breadcrumbs /*Styling for navigational breadcrumbs. */
+
+Pagination /*CSS for pagination links. */
+
+Cards /*Design for content cards with image, text, etc. */
+
+Image_ Galleries /*Styles for image layouts. */
+
+Sliders/Carousels /*Styling for image sliders. */
+
+Tabs /*Styles for tabbed content navigation. */
+
+Accordions /*Styles for collapsible content panels. */
+
+Progress_ Bars /*Styles for linear progress indicators. */
