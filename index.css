@@ -187,6 +187,17 @@
   color: #0a0a0a; }
 }
 
+.navbar-burger span { 
+  background-color: currentColor; 
+  display: block; 
+  height: 1px; 
+  left: calc(50% - 8px); 
+  position: absolute; 
+  transform-origin: center; 
+  transition-duration: 86ms; 
+  transition-property: background-color, opacity, transform; 
+  transition-timing-function: ease-out; width: 16px; 
+}
 
 
 
