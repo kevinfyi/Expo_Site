@@ -127,7 +127,7 @@
   /* Path: html, body */
   /* Description: Base styles applied to the entire HTML document and the body. */
   html { 
-    background-color: #ffffff;
+    background-color: var(--yellow);
     font-size: 16px; 
     -moz-osx-font-smoothing: grayscale; 
     -webkit-font-smoothing: antialiased; 
@@ -166,22 +166,26 @@
   /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 
 .nav-main{
-    display: flex-start;
-    flex-direction: column;
-    justify-content: center;
     min-height: 3.25rem;
     background-color: white;
     position: relative;
     z-index: 30;
 }
 
-
 .nav-brand img{
     display: block;
     height: 10px;
 }
 
-
+.nav .nav-brand > a.nav-item:focus, 
+.nav .nav-brand > a.nav-item:hover, 
+.nav .nav-brand > a.nav-item.is-active, 
+.nav .nav-brand .nav-link:focus, 
+.nav .nav-brand .nav-link:hover, 
+.nav .nav-brand .nav-link.is-active{
+  background-color: #f2f2f2; 
+  color: #0a0a0a; }
+}
 
 
 
