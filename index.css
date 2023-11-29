@@ -283,21 +283,11 @@ img {
 .nav .nav-brand .nav-link:hover,
 .nav .nav-brand .nav-link.is-active {
   background-color: #f2f2f2;
-  color: #0a0a0a;
+  color: blue;
+  font-size: 24px;
+  font-weight: 800;
 }
 
-.nav-burger span {
-  background-color: currentColor;
-  display: block;
-  height: 1px;
-  left: calc(50% - 8px);
-  position: absolute;
-  transform-origin: center;
-  transition-property: background-color, opacity, transform;
-  transition-timing-function: ease-out;
-  width: 16px;
-  transition-duration: 100ms;
-}
 
 .navbar-menu {
   display: none;
@@ -345,8 +335,20 @@ a.nav-item,
   background-color: #e74c3c;
 }
 
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> @media (Different Screensizes) Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 
-
+.nav-burger span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+  transition-duration: 100ms;
+}
 
 
 Grid System
