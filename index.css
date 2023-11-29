@@ -276,12 +276,13 @@ img {
   z-index: 30;
 }
 
-.nav .nav-brand>a.nav-item:focus,
-.nav .nav-brand>a.nav-item:hover,
-.nav .nav-brand>a.nav-item.is-active,
-.nav .nav-brand .nav-link:focus,
-.nav .nav-brand .nav-link:hover,
-.nav .nav-brand .nav-link.is-active {
+.nav-main .nav-brand>a.nav-item:focus,
+.nav-main .nav-brand>a.nav-item:hover,
+.nav-main .nav-brand>a.nav-item.is-active,
+.nav-main .nav-brand .nav-link:focus,
+.nav-main .nav-brand .nav-link:hover,
+.nav-main .nav-brand .nav-link.is-active,
+.nav-main .nav-item {
   background-color: #f2f2f2;
   color: blue;
   font-size: 24px;
