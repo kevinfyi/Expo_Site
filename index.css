@@ -1,233 +1,304 @@
 /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Reset and Normalize <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 
 /* Universal box-sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* Reset margins, paddings and borders */
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  
-  /* HTML5 display-role reset */
-  article, aside, details, figcaption, figure, 
-  footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
-  
-  /* List style reset */
-  ol, ul {
-    list-style: none;
-  }
-  
-  /* Blockquote and quotes reset */
-  blockquote, q {
-    quotes: none;
-  }
-  
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
-    content: none;
-  }
-  
-  /* Table reset */
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  /* Additional resets and common stylings */
-  img, video {
-    height: auto;
-    max-width: 100%;
-  }
-  
-  /* Form element reset */
-  input, button, textarea, select {
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    background: transparent;
-    border: 1px solid #ccc;
-    color: inherit;
-  }
-  
-  /* Remove default link styling */
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Heading margins */
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-size: 100%;
-    font-weight: normal;
-  }
-  
-  /* Ensure iframes don't have a border */
-  iframe {
-    border: none;
-  }
-  
-  /* Ensure body uses the default style settings */
-  body {
-    font-family: sans-serif;
-    line-height: 1;
-  }
-  
-  /* Ensure consistent outline for focusable elements */
-  :focus {
-    outline: 2px solid blue;
-  }
-  
-  /* Handle HTML5 hidden attribute */
-  [hidden] {
-    display: none;
-  }
-  
-  
-  /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> GLOBAL <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-  /* ********** Root Styles ********** */
-  /* Path: html, body */
-  
-  :root {
-    --green: #27ae60;
-    --blue: #3498db;
-    --yellow: #f7af15;
-    --red: #e74c3c;
-    --orange: #fe5722;
-    --purple: #9b27af;
-    --gray: #747681;
-    --black: #333;
-    --font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  }
-  
-  
-  /* ********** HTML and Body Styles ********** */
-  /* Path: html, body */
-  /* Description: Base styles applied to the entire HTML document and the body. */
-  html { 
-    background-color: var(--yellow);
-    font-size: 16px; 
-    -moz-osx-font-smoothing: grayscale; 
-    -webkit-font-smoothing: antialiased; 
-    min-width: 300px; 
-    overflow-x: hidden; 
-    overflow-y: scroll; 
-    text-rendering: optimizeLegibility; 
-    -webkit-text-size-adjust: 100%; 
-    -moz-text-size-adjust: 100%; 
-    text-size-adjust: 100%; 
-  }
-  
-  body { 
-    color: #141c3a; 
-    font-size: 1em; 
-    font-weight: 400; 
-    line-height: 1.5; 
-  }
-  
-  body, button, input, optgroup, select, textarea { 
-    font-family: "europa", sans-serif; 
-  }
-  
-  /* ********** Global Anchor and Button Styling ********** */
-  
-  /* ********** Container Styles ********** */
-  
-  /* ********** Image and Icon Styles ********** */
-  img {
-    display: inline-block;
-  }
-  
-  /* ********** Header Styling ********** */
-  
-  /* ********** Section Styling ********** */
-  
-  /* ********** Footer Styling ********** */
-  
-  /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-
-.nav-main{
-    min-height: 3.25rem;
-    background-color: white;
-    position: relative;
-    z-index: 30;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.nav .nav-brand > a.nav-item:focus, 
-.nav .nav-brand > a.nav-item:hover, 
-.nav .nav-brand > a.nav-item.is-active, 
-.nav .nav-brand .nav-link:focus, 
-.nav .nav-brand .nav-link:hover, 
-.nav .nav-brand .nav-link.is-active{
-  background-color: #f2f2f2; 
-  color: #0a0a0a; 
+/* Reset margins, paddings and borders */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.nav-burger span { 
-  background-color: currentColor; 
-  display: block; 
-  height: 1px; 
-  left: calc(50% - 8px); 
-  position: absolute; 
-  transform-origin: center; 
-  transition-property: background-color, opacity, transform; 
-  transition-timing-function: ease-out; width: 16px; 
-  transition-duration: 100ms; 
+/* HTML5 display-role reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* List style reset */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Blockquote and quotes reset */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Table reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Additional resets and common stylings */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Form element reset */
+input,
+button,
+textarea,
+select {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #ccc;
+  color: inherit;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Heading margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* Ensure iframes don't have a border */
+iframe {
+  border: none;
+}
+
+/* Ensure body uses the default style settings */
+body {
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+/* Ensure consistent outline for focusable elements */
+:focus {
+  outline: 2px solid blue;
+}
+
+/* Handle HTML5 hidden attribute */
+[hidden] {
+  display: none;
 }
 
 
-.nav-burger span:nth-child(1) {
-  top: calc(50% - 6px);
-}
-  
-.nav-burger span:nth-child(2) {
-  top: calc(50% - 1px);
-}
-  
-  .nav-burger span:nth-child(3) {
-    top: calc(50% + 4px);
-  }
-  
-.nav-burger:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-  
-.nav-burger.is-active span:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
-}
-  
-.nav-burger.is-active span:nth-child(2) {
-  opacity: 0;
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> GLOBAL <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+/* ********** Root Styles ********** */
+/* Path: html, body */
+
+:root {
+  --green: #27ae60;
+  --blue: #3498db;
+  --yellow: #f7af15;
+  --red: #e74c3c;
+  --orange: #fe5722;
+  --purple: #9b27af;
+  --gray: #747681;
+  --black: #333;
+  --font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
-.nav-burger.is-active span:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
+
+/* ********** HTML and Body Styles ********** */
+/* Path: html, body */
+/* Description: Base styles applied to the entire HTML document and the body. */
+html {
+  background-color: var(--yellow);
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  color: #141c3a;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "europa", sans-serif;
+}
+
+/* ********** Global Anchor and Button Styling ********** */
+
+/* ********** Container Styles ********** */
+
+/* ********** Image and Icon Styles ********** */
+img {
+  display: inline-block;
+}
+
+/* ********** Header Styling ********** */
+
+/* ********** Section Styling ********** */
+
+/* ********** Footer Styling ********** */
+
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+
+.nav-main {
+  min-height: 3.25rem;
+  background-color: white;
+  position: relative;
+  z-index: 30;
+}
+
+.nav .nav-brand>a.nav-item:focus,
+.nav .nav-brand>a.nav-item:hover,
+.nav .nav-brand>a.nav-item.is-active,
+.nav .nav-brand .nav-link:focus,
+.nav .nav-brand .nav-link:hover,
+.nav .nav-brand .nav-link.is-active {
+  background-color: #f2f2f2;
+  color: #0a0a0a;
+}
+
+.nav-burger span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+  transition-duration: 100ms;
 }
 
 .navbar-menu {
   display: none;
+  opacity: 0;
 }
 
 .nav-item,
@@ -257,60 +328,89 @@ a.nav-item,
 
 
 
-Grid System /*For layout structure, like Flexbox or CSS Grid. */
-  
-Typography Rules /*Font-family, font-size, line-height, and text-align. */
+Grid System
+/*For layout structure, like Flexbox or CSS Grid. */
 
-Colors /*Primary and secondary color variables. */
+Typography Rules
+/*Font-family, font-size, line-height, and text-align. */
 
-Buttons /*Styles for different button states (hover, active). */
+Colors
+/*Primary and secondary color variables. */
 
-Forms /*Input, textarea, select, and label styling. */
+Buttons
+/*Styles for different button states (hover, active). */
 
-Navigation Bars /*Horizontal or vertical navigation styling. */
+Forms
+/*Input, textarea, select, and label styling. */
 
-Containers and Wrappers /*For content layout. */
+Navigation Bars
+/*Horizontal or vertical navigation styling. */
 
-Spacing Utilities /*Margin and padding classes. */
+Containers and Wrappers
+/*For content layout. */
 
-Media Queries /*For responsive design. */
+Spacing Utilities
+/*Margin and padding classes. */
 
-Animations /*Keyframes and transition properties. */
+Media Queries
+/*For responsive design. */
 
-Hover Effects /*For links, buttons, etc. */
+Animations
+/*Keyframes and transition properties. */
 
-Lists /*Style for ordered and unordered lists. */
+Hover Effects
+/*For links, buttons, etc. */
 
-Tables /*Basic styling for tables. */
+Lists
+/*Style for ordered and unordered lists. */
 
-Borders /*Border styles and border-radius for rounded corners. */
+Tables
+/*Basic styling for tables. */
 
-Flexbox Utilities /*For aligning and distributing space among items. */
+Borders
+/*Border styles and border-radius for rounded corners. */
 
-Backgrounds /*Background color, images, and gradients. */
+Flexbox Utilities
+/*For aligning and distributing space among items. */
 
-Positioning /*Relative, absolute, fixed positioning. */
+Backgrounds
+/*Background color, images, and gradients. */
 
-Icons /*Integration and styling of icon fonts or SVG icons. */
+Positioning
+/*Relative, absolute, fixed positioning. */
 
-Alerts and Messages /*Styling for error, warning, and information messages. */
+Icons
+/*Integration and styling of icon fonts or SVG icons. */
 
-Tooltips /*CSS for hover text hints. */
+Alerts and Messages
+/*Styling for error, warning, and information messages. */
 
-Modals /*Styling for pop-up modals/dialogs. */
+Tooltips
+/*CSS for hover text hints. */
 
-Breadcrumbs /*Styling for navigational breadcrumbs. */
+Modals
+/*Styling for pop-up modals/dialogs. */
 
-Pagination /*CSS for pagination links. */
+Breadcrumbs
+/*Styling for navigational breadcrumbs. */
 
-Cards /*Design for content cards with image, text, etc. */
+Pagination
+/*CSS for pagination links. */
 
-Image_ Galleries /*Styles for image layouts. */
+Cards
+/*Design for content cards with image, text, etc. */
 
-Sliders/Carousels /*Styling for image sliders. */
+Image_ Galleries
+/*Styles for image layouts. */
 
-Tabs /*Styles for tabbed content navigation. */
+Sliders/Carousels
+/*Styling for image sliders. */
 
-Accordions /*Styles for collapsible content panels. */
+Tabs
+/*Styles for tabbed content navigation. */
 
-Progress_ Bars /*Styles for linear progress indicators. */
+Accordions
+/*Styles for collapsible content panels. */
+
+Progress_ Bars
+/*Styles for linear progress indicators. */
