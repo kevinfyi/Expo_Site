@@ -276,12 +276,12 @@ img {
   z-index: 30;
 }
 
-.nav-main .nav-brand>a.nav-item:focus,
-.nav-main .nav-brand>a.nav-item:hover,
-.nav-main .nav-brand>a.nav-item:active,
-.nav-main .nav-brand .nav-link:focus,
-.nav-main .nav-brand .nav-link:hover,
-.nav-main .nav-brand .nav-link:active,
+.nav-main .nav-logo>a.nav-item:focus,
+.nav-main .nav-logo>a.nav-item:hover,
+.nav-main .nav-logo>a.nav-item:active,
+.nav-main .nav-logo .nav-link:focus,
+.nav-main .nav-logo .nav-link:hover,
+.nav-main .nav-logo .nav-link:active,
 .nav-main .nav-item {
   background-color: #f2f2f2;
   color: blue;
@@ -328,7 +328,7 @@ a.nav-item,
   border: 5px solid greenyellow;
 }
 
-.nav-brand{
+.nav-logo{
   border: 5px solid violet;
 }
 
@@ -457,8 +457,8 @@ a.nav-item,
           .nav-divider { 
             display: block; 
           } 
-          .nav > .container .nav-brand, 
-          .container > .nav .nav-brand { 
+          .nav > .container .nav-logo, 
+          .container > .nav .nav-logo { 
             margin-left: -0.75rem; 
           } 
           .nav > .container .nav-menu, 
