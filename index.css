@@ -329,9 +329,22 @@ a.nav-item,
 
 
 
-nav-main{
+.nav-main{
   border: 3px solid blue;
 }
+
+.container{
+  border: 5px solid greenyellow;
+}
+
+.nav-brand{
+  border: 5px solid violet;
+}
+
+.nav-item{
+  background-color: #e74c3c;
+}
+
 
 
 
