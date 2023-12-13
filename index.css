@@ -519,7 +519,7 @@ span { font-style: inherit; font-weight: inherit; }
 
 
 /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styling <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-header{
+/* header{
   background-color: blue;
   margin-top: 0;
   padding-top: 0;
@@ -623,7 +623,7 @@ body{
 .hamburger::before{
     display: none; 
   }
-}
+} */
 
 
 
