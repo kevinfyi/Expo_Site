@@ -114,14 +114,15 @@ body {
 
 :root {
   --green: #27ae60;
-  --blue: #3498db;
+  --blue: #0000ff;
+  --ot-blue: #3498db;
   --yellow: #f7af15;
   --red: #e74c3c;
   --orange: #fe5722;
   --purple: #9b27af;
   --gray: #747681;
   --black: #333;
-  --white: #fff;
+  --white: 	#FAF9F6;
   --font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
@@ -144,11 +145,11 @@ html {
 }
 
 body { 
-  color: #141c3a; 
+  color: var(--green); 
   font-size: 1em; 
   font-weight: 400; 
   line-height: 1.5; 
-  background-color: white;
+  background-color: var(--white);
 }
 
 body, button, input, optgroup, select, textarea { 
@@ -284,8 +285,6 @@ a:hover {
   top: 0; 
 }
 
-
-
 /* ********** Image and Icon Styles ********** */
 /* Path: Body -> Images and Icons */
 .icon { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
@@ -298,7 +297,6 @@ img { height: auto; max-width: 100%; }
 
 .image img.btn-rounded { border-radius: 9999px; }
 .image.is-3by2 { padding-top: 66.6666%; }
-
 
 /* ********** Section Styling ********** */
 /* Path: Body -> Section */
@@ -324,16 +322,17 @@ span { font-style: inherit; font-weight: inherit; }
   line-height: 1.25; 
 }
 
-
 .title { 
   color: #141c3a; 
 }
 
 /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Section Styling (Navigation) <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 header{
-  background-color: blue;
   margin-top: 0;
   padding-top: 0;
+  z-index:9;
+  border-bottom: 0.5px solid #E6ECF8;
+  
 }
 header .nav-logo img{
   width:67.5px; 
@@ -341,13 +340,12 @@ header .nav-logo img{
 }
 
 body{
-  background-color: lightblue;
+  background-color: white;
 }
 
 .contain{
   display: flex;
   justify-content: space-between;
-  z-index:9;
   padding: 10px;
 }
 
@@ -369,7 +367,7 @@ body{
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #fff;
+  background-color: var(--blue);
   margin: 5px 0px;
   transition: 0.4s;
 }
@@ -396,7 +394,7 @@ body{
   width: 100%;
   min-height: 100vh;
   z-index:3;
-  background-color: blue;
+  background-color: var(--blue);
   padding-top:  65px;
   margin-top:65px;
   transition: 0.6s;
