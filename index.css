@@ -1,94 +1,25 @@
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> MOBILE FIRST DESIGN <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+
 /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Reset and Normalize <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 
 /* Universal box-sizing */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 /* Reset margins, paddings and borders */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -98,36 +29,23 @@ video {
 }
 
 /* HTML5 display-role reset */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
 /* List style reset */
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
 /* Blockquote and quotes reset */
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
   content: '';
   content: none;
 }
@@ -139,17 +57,13 @@ table {
 }
 
 /* Additional resets and common stylings */
-img,
-video {
+img, video {
   height: auto;
   max-width: 100%;
 }
 
 /* Form element reset */
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font-size: 100%;
   margin: 0;
   padding: 0;
@@ -166,12 +80,7 @@ a {
 }
 
 /* Heading margins */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 100%;
   font-weight: normal;
@@ -200,7 +109,7 @@ body {
 
 
 /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> GLOBAL <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-/* ********** Root Styles ********** */
+/* ********** Root Global Styles ********** */
 /* Path: html, body */
 
 :root {
@@ -216,384 +125,514 @@ body {
 }
 
 
-/* ********** HTML and Body Styles ********** */
+/* ********** Global HTML and Body Styles ********** */
 /* Path: html, body */
 /* Description: Base styles applied to the entire HTML document and the body. */
-html {
-  background-color: var(--yellow);
-  font-size: 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  min-width: 300px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+html { 
+  background-color: #ffffff;
+  font-size: 16px; 
+  -moz-osx-font-smoothing: grayscale; 
+  -webkit-font-smoothing: antialiased; 
+  min-width: 300px; 
+  overflow-x: hidden; 
+  overflow-y: scroll; 
+  text-rendering: optimizeLegibility; 
+  -webkit-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%; 
+  text-size-adjust: 100%; 
 }
 
-body {
-  color: #141c3a;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
+body { 
+  color: #141c3a; 
+  font-size: 1em; 
+  font-weight: 400; 
+  line-height: 1.5; 
 }
 
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: "europa", sans-serif;
+body, button, input, optgroup, select, textarea { 
+  font-family: "europa", sans-serif; 
 }
+
 
 /* ********** Global Anchor and Button Styling ********** */
+/* Path: Body -> Buttons -> Variants */
+a, .button { 
+  transition: all .2s ease-in-out; 
+  -webkit-transition: all .2s ease-in-out; 
+  font-weight: 400; 
+  color: #6495ED; 
+  cursor: pointer; 
+  text-decoration: none; 
+}
+
+.button {
+  align-items: center; 
+  border: 1px solid transparent; 
+  border-radius: 4px; 
+  box-shadow: none; 
+  display: inline-flex; 
+  font-size: 1rem; 
+  height: 2.5em; 
+  justify-content: flex-start; 
+  line-height: 1.5; 
+  padding-bottom: calc(0.5em - 1px); 
+  padding-left: calc(0.75em - 1px); 
+  padding-right: calc(0.75em - 1px); 
+  padding-top: calc(0.5em - 1px); 
+  position: relative; 
+  vertical-align: top; }
+
+a:hover { 
+  color: #0061ff; 
+  font-weight: 600; 
+}
+
+.button:hover { 
+  background-color: #0061ff;
+  color: white; 
+}
+
+.button.btn-rounded { 
+  border-radius: 9999px; 
+  padding-left: 1.25em; 
+  padding-right: 1.25em; 
+}
+
+.button.btn-outlined { 
+  background-color: transparent; 
+  border-color: #0000CD; 
+  color: #0000CD; 
+}
+
+.button.is-primary:hover { 
+  background-color: #0000CD; 
+  border-color: transparent; 
+  color: white; 
+}
+
+.button.is-secondary:hover { 
+  background-color: #0061ff; 
+  border-color: transparent; 
+  color: white; 
+}
+
+.button.is-primary.btn-outlined:hover { 
+  background-color: #0000CD; 
+  border-color: #0000CD; 
+  color: white; 
+  font-weight: 400; 
+}
+
+.button.is-medium { 
+  font-size: 1.25rem; 
+}
 
 /* ********** Container Styles ********** */
-
-/* ********** Image and Icon Styles ********** */
-img {
-  display: inline-block;
+/* Path: Body -> Containers */
+.container.is-narrow { 
+  max-width: 1200px; 
 }
-
-/* ********** Header Styling ********** */
-
-/* ********** Section Styling ********** */
-
-/* ********** Footer Styling ********** */
-
-/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-
-.container { flex-grow: 1; margin: 0 auto; position: relative; width: auto; }
-.nav > .container { align-items: stretch; display: flex; min-height: 3.25rem; width: 100%; }
-
-.nav-main {
-  min-height: 3.25rem;
-  background-color: white;
-  position: relative;
-  z-index: 30;
-}
-
-.nav-main .nav-logo>a.nav-item:focus,
-.nav-main .nav-logo>a.nav-item:hover,
-.nav-main .nav-logo>a.nav-item:active,
-.nav-main .nav-logo .nav-link:focus,
-.nav-main .nav-logo .nav-link:hover,
-.nav-main .nav-logo .nav-link:active,
-.nav-main .nav-item {
-  background-color: #f2f2f2;
-  color: blue;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-
-.nav-menu {
-  display: none;
-  opacity: 0;
-}
-
-.nav-item,
-.nav-link {
-  color: #4a4a4a;
-  display: block;
-  line-height: 1.5;
-  padding: 0.5rem 0.75rem;
-  position: relative;
-}
-
-.nav-item .icon:only-child,
-.nav-link .icon:only-child {
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
-}
-
-a.nav-item,
-.nav-link {
-  cursor: pointer;
-}
-
-
-
-
-
-
-.nav-main{
-  border: 3px solid blue;
-}
-
-.container{
-  border: 5px solid greenyellow;
-}
-
-.nav-logo{
-  border: 5px solid violet;
-}
-
-.nav-item{
-  background-color: #e74c3c;
-}
-
-/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> @media (Different Screensizes) Styles <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-
-.nav-burger span {
-  background-color: currentColor;
-  display: block;
-  height: 1px;
-  left: calc(50% - 8px);
-  position: absolute;
-  transform-origin: center;
-  transition-property: background-color, opacity, transform;
-  transition-timing-function: ease-out;
-  width: 16px;
-  transition-duration: 100ms;
+.container { 
+  flex-grow: 1; 
+  margin: 0 auto; 
+  position: relative; 
+  width: auto; 
 }
 
 @media screen and (min-width: 1024px) { 
-  .nav-main, .nav-menu, 
-  .nav-start, .nav-end { 
-    align-items: stretch; 
-    display: flex; 
+  .container { 
+    max-width: 960px; 
   } 
-  .nav { 
-    min-height: 3.25rem; 
+}
+
+/* ********** Grid Layout Styles ********** */
+/* Path: Body -> Grid Layout */
+.flex-wrap { 
+  flex-wrap: wrap; 
+}
+
+.columns {
+  display: flex;
+}
+
+/* .columns { 
+  margin-left: -0.75rem; 
+  margin-right: -0.75rem; 
+  margin-top: -0.75rem; 
+} */
+
+.column { 
+  display: block; 
+  flex-grow: 1; 
+  flex-shrink: 1; 
+  flex-basis: 0; 
+  padding: 0.75rem; 
+}
+
+.tile { 
+  align-items: stretch; 
+  display: block; 
+  flex-basis: 0; 
+  flex-grow: 1; 
+  flex-shrink: 1; 
+  min-height: -webkit-min-content; 
+  min-height: -moz-min-content; 
+  min-height: min-content; 
+}
+
+.image.is-3by2 img { 
+  bottom: 0; 
+  left: 0; 
+  position: absolute; 
+  right: 0; 
+  top: 0; 
+}
+
+@media screen and (max-width: 668px) {
+  .screen-display-mobile-1-2-3-4-5-6-7-8-9, 
+  .screen-display-tablet-1-2-3-4-5-6-7-8-9, 
+  .screen-display-desktop-1-2-3-4-5-6-7-8-9 { 
+    flex: none; 
+    width: 100%; } 
+}
+
+@media screen and (max-width: 668px) {
+  .column.is-half-tablet { 
+    flex: none; 
+    width: 100%; } 
+}
+
+@media screen and (min-width: 669px), print { 
+  .column.is-half-tablet { 
+  flex: none; 
+  width: 50%; } 
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 1024px) { 
+  .column.is-one-third-desktop { 
+  flex: none; 
+  width: 33.3333%; 
+  }
+}
+
+@media screen and (max-width: 1215px) {
+
+}
+
+@media screen and (min-width: 1216px) { 
+  .is-size-4-widescreen { 
+  font-size: 3rem; 
+} 
+}
+
+@media screen and (max-width: 1407px) {
+
+}
+
+@media screen and (min-width: 1408px) {
+
+}
+
+
+/* ********** Image and Icon Styles ********** */
+/* Path: Body -> Images and Icons */
+.icon { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
+
+img { height: auto; max-width: 100%; }
+
+.image { display: block; position: relative; }
+
+.image img { display: block; height: auto; width: 100%; }
+
+.image img.btn-rounded { border-radius: 9999px; }
+.image.is-3by2 { padding-top: 66.6666%; }
+
+
+/* ********** Section Styling ********** */
+/* Path: Body -> Section */
+/* Description: Styles for section elements. */
+.section { 
+  padding: 5rem 1.5rem; 
+}
+
+.has-text-centered {
+  text-align: center; 
+  
+}
+
+.is-size-5 { font-size: 1.25rem; 
+}
+
+span { font-style: inherit; font-weight: inherit; }
+
+.subtitle { 
+  color: #141c3a; 
+  font-size: 1.25rem; 
+  font-weight: 400; 
+  line-height: 1.25; 
+}
+
+
+.title { 
+  color: #141c3a; 
+}
+
+
+/* ********** Typography Styles - Responsive ********** */
+/* Path: Body -> Typography -> Responsive */
+@media screen and (max-width: 668px) { 
+  .is-size-4-mobile { font-size: 2rem; } 
+}
+
+@media screen and (min-width: 669px) and (max-width: 1023px){ 
+  .is-size-4-mobile { font-size: 2rem; } 
+}
+
+@media screen and (min-width: 1024px) { 
+  .is-size-3-desktop { font-size: 2rem; } 
+  .is-size-5-desktop { font-size: 1.25rem; 
   } 
-  .nav.is-spaced { 
-    padding: 1rem 2rem; 
-  } 
-  .nav.is-spaced .nav-start, 
-  .nav.is-spaced .nav-end { 
-    align-items: center; 
-  } 
-  .nav.is-spaced a.nav-item, 
-  .nav.is-spaced .nav-link { 
-    border-radius: 4px; 
-  } 
-  .nav.is-transparent a.nav-item:focus, 
-  .nav.is-transparent a.nav-item:hover, 
-  .nav.is-transparent a.nav-item.is-active, 
-  .nav.is-transparent .nav-link:focus, 
-  .nav.is-transparent .nav-link:hover, 
-  .nav.is-transparent .nav-link.is-active { 
-    background-color: transparent !important; 
-  } 
-    .nav.is-transparent .nav-item.has-dropdown.is-active .nav-link, 
-    .nav.is-transparent .nav-item.has-dropdown.is-hoverable:focus .nav-link, 
-    .nav.is-transparent .nav-item.has-dropdown.is-hoverable:focus-within .nav-link, 
-    .nav.is-transparent .nav-item.has-dropdown.is-hoverable:hover .nav-link { 
-      background-color: transparent !important; 
+}
+
+
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> First Section Styles (Projects) <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+/* Path: Body -> Section (.projects) */
+/* This section includes styles specific to the .projects section, including grid, figures, captions, buttons, and overlays. */
+
+/* Project Grid Styles */
+/* Path: Body -> Section (.projects) -> Project Grid */
+/* Description: Styles for the project grid layout and responsive padding. */
+
+.projects { 
+  margin: 1rem;
+  padding: 1rem; 
+}
+.projects .project-grid { 
+  padding: 2rem 0 4rem; 
+}
+
+@media screen and (min-width: 669px) { 
+  .projects .project-grid { 
+    padding-top: 4rem; 
     } 
-    .nav.is-transparent .nav-dropdown a.nav-item:focus, 
-      .nav.is-transparent .nav-dropdown a.nav-item:hover { 
-        background-color: whitesmoke; color: #0a0a0a; 
-      } 
-      .nav.is-transparent .nav-dropdown a.nav-item.is-active { 
-        background-color: whitesmoke; color: #1a8cff; 
-      } 
-      .nav-burger { 
-        display: none; 
-      } 
-      .nav-item, 
-      .nav-link { 
-        align-items: center; display: flex; 
-      } 
-      .nav-item.has-dropdown { 
-        align-items: stretch; 
-      } 
-      .nav-item.has-dropdown-up .nav-link::after { 
-        -webkit-transform: rotate(135deg) translate(0.25em, -0.25em); transform: rotate(135deg) translate(0.25em, -0.25em); 
-      } 
-      .nav-item.has-dropdown-up .nav-dropdown { 
-        border-bottom: 2px solid #dbdbdb; border-radius: 6px 6px 0 0; border-top: none; bottom: 100%; box-shadow: 0 -8px 8px rgba(10, 10, 10, 0.1); top: auto; 
-      } 
-      .nav-item.is-active .nav-dropdown, 
-      .nav-item.is-hoverable:focus .nav-dropdown, 
-      .nav-item.is-hoverable:focus-within .nav-dropdown, 
-      .nav-item.is-hoverable:hover .nav-dropdown { 
-        display: block; 
-      } 
-      .nav.is-spaced .nav-item.is-active .nav-dropdown, 
-      .nav-item.is-active .nav-dropdown.is-boxed, 
-      .nav.is-spaced .nav-item.is-hoverable:focus .nav-dropdown, 
-      .nav-item.is-hoverable:focus .nav-dropdown.is-boxed, 
-      .nav.is-spaced .nav-item.is-hoverable:focus-within .nav-dropdown, 
-      .nav-item.is-hoverable:focus-within .nav-dropdown.is-boxed, 
-      .nav.is-spaced .nav-item.is-hoverable:hover .nav-dropdown, 
-      .nav-item.is-hoverable:hover .nav-dropdown.is-boxed { 
-        opacity: 1; pointer-events: auto; -webkit-transform: translateY(0); transform: translateY(0); } 
-        .nav-menu { 
-          flex-grow: 1; flex-shrink: 0; 
-        } 
-        .nav-start { 
-          justify-content: flex-start; margin-right: auto; 
-        } 
-        .nav-end { 
-          justify-content: flex-end; margin-left: auto; 
-        } 
-        .nav-dropdown { 
-          background-color: #ffffff; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top: 2px solid #dbdbdb; box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1); display: none; font-size: 0.875rem; left: 0; min-width: 100%; position: absolute; top: 100%; z-index: 20; 
-        } 
-        .nav-dropdown .nav-item { 
-          padding: 0.375rem 1rem; white-space: nowrap; 
-        } 
-        .nav-dropdown a.nav-item { 
-          padding-right: 3rem; 
-        } 
-        .nav-dropdown a.nav-item:focus, 
-        .nav-dropdown a.nav-item:hover { 
-          background-color: whitesmoke; color: #0a0a0a; 
-        } 
-        .nav-dropdown a.nav-item.is-active { 
-          background-color: whitesmoke; color: #1a8cff; } 
-          .nav.is-spaced .nav-dropdown, 
-          .nav-dropdown.is-boxed { 
-            border-radius: 6px; border-top: none; box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); display: block; opacity: 0; pointer-events: none; top: calc(100% + (-4px)); -webkit-transform: translateY(-5px); transform: translateY(-5px); transition-duration: 86ms; transition-property: opacity, -webkit-transform; transition-property: opacity, transform; transition-property: opacity, transform, -webkit-transform; 
-          } 
-          .nav-dropdown.is-right { 
-            left: auto; right: 0; 
-          } 
-          .nav-divider { 
-            display: block; 
-          } 
-          .nav > .container .nav-logo, 
-          .container > .nav .nav-logo { 
-            margin-left: -0.75rem; 
-          } 
-          .nav > .container .nav-menu, 
-          .container > .nav .nav-menu { 
-            margin-right: -0.75rem; 
-          } 
-          .nav.is-fixed-bottom-desktop, 
-          .nav.is-fixed-top-desktop { 
-            left: 0; position: fixed; right: 0; z-index: 30; 
-          } .nav.is-fixed-bottom-desktop { 
-            bottom: 0; 
-          } 
-          .nav.is-fixed-bottom-desktop.has-shadow { 
-            box-shadow: 0 -2px 3px rgba(10, 10, 10, 0.1); 
-          } 
-          .nav.is-fixed-top-desktop { 
-            top: 0; 
-          } 
-          html.has-nav-fixed-top-desktop, 
-          body.has-nav-fixed-top-desktop { 
-            padding-top: 3.25rem; 
-          } 
-          html.has-nav-fixed-bottom-desktop, 
-          body.has-nav-fixed-bottom-desktop { 
-            padding-bottom: 3.25rem; 
-          } 
-          html.has-spaced-nav-fixed-top, 
-          body.has-spaced-nav-fixed-top { 
-            padding-top: 5.25rem; 
-          } 
-          html.has-spaced-nav-fixed-bottom, 
-          body.has-spaced-nav-fixed-bottom { 
-            padding-bottom: 5.25rem; 
-          } 
-          a.nav-item.is-active, 
-          .nav-link.is-active { 
-            color: #0a0a0a; 
-          } 
-          a.nav-item.is-active:not(:focus):not(:hover), 
-          .nav-link.is-active:not(:focus):not(:hover) { 
-            background-color: transparent; 
-          } 
-          .nav-item.has-dropdown:focus .nav-link, 
-          .nav-item.has-dropdown:hover .nav-link, 
-          .nav-item.has-dropdown.is-active .nav-link { 
-            background-color: #fafafa; 
-          } 
-        }
+  }
+
+/* Figure and Image Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Image */
+/* Description: Default and hover styles for images within figures in the project grid. */
+.projects .project-grid figure img.project-thumb { 
+  -webkit-transform: scale(1); 
+  transform: scale(1); 
+  transition: .5s ease-in-out; 
+}
+
+.projects .project-grid figure:hover img { 
+  -webkit-transform: scale(1.25); 
+  transform: scale(1.25); 
+}
+
+/* Figure Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure */
+/* Description: Positioning and styling for figures within the project grid. */
+.projects .project-grid figure { 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 12px; 
+}
+
+/* Figcaption Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption */
+/* Description: Default and responsive styles for captions within figures. */
+.projects .project-grid figure figcaption { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 0rem 3rem; 
+  color: #ffffff; 
+  z-index: 1; 
+}
+
+@media screen and (min-width: 669px) { 
+  .projects .project-grid figure figcaption { 
+    padding: 0rem 2rem; 
+  } 
+}
+
+/* Title Styles in Figcaption */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption -> Title */
+/* Description: Styling for titles within figcaptions. */
+.projects .project-grid figure figcaption h1.title { 
+  color: #ffffff; 
+  margin-bottom: 1.8rem; 
+  font-weight: 500; 
+}
+
+/* Button Styles in Figcaption */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption -> Button */
+/* Description: Styles for buttons within figcaptions, including icons. */
+.projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded { 
+  margin: 0 auto; 
+  font-size: 18px; 
+  padding: 1.2rem; 
+  font-weight: 400; 
+  border-width: 2px; 
+  color: #ffffff; 
+}
+
+.projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded span.icon { 
+  margin-top: 4px; 
+  margin-left: 0px; 
+}
+
+/* Overlay Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Overlay */
+/* Description: Default and hover styles for overlay effects within the project grid. */
+.projects .project-grid .overlay, 
+.projects .project-grid figcaption { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  opacity: 0; 
+  transition: .45s ease-in-out; 
+}
+
+.projects .project-grid .overlay { 
+  background-color: #141c3a; 
+}
+
+.projects .project-grid figure:hover .overlay, 
+.projects .project-grid figure:hover figcaption { 
+  opacity: 1; 
+}
 
 
-        
 
-Grid System
-/*For layout structure, like Flexbox or CSS Grid. */
+/* FOOTER */
 
-Typography Rules
-/*Font-family, font-size, line-height, and text-align. */
 
-Colors
-/*Primary and secondary color variables. */
 
-Buttons
-/*Styles for different button states (hover, active). */
 
-Forms
-/*Input, textarea, select, and label styling. */
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styling <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+header{
+  background-color: blue;
+  margin-top: 0;
+  padding-top: 0;
+}
+header .nav-logo img{
+  width:67.5px; 
+  height: 50px;
+}
 
-Navigation Bars
-/*Horizontal or vertical navigation styling. */
+body{
+  background-color: lightblue;
+}
 
-Containers and Wrappers
-/*For content layout. */
+.container{
+  display: flex;
+  justify-content: space-between;
+  z-index:9;
+  padding: 10px;
+}
 
-Spacing Utilities
-/*Margin and padding classes. */
+.hamburger{
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  margin: auto 10px;
+}
 
-Media Queries
-/*For responsive design. */
+.hamburger .bar, .hamburger::after, 
+.hamburger::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0px;
+  transition: 0.4s;
+}
 
-Animations
-/*Keyframes and transition properties. */
+.hamburger.is-active::before {
+ transform: rotate(-45deg) translate(-5px, 7px); 
+}
 
-Hover Effects
-/*For links, buttons, etc. */
+.hamburger.is-active::after {
+ transform: rotate(45deg) translate(-6px, -7px); 
+}
 
-Lists
-/*Style for ordered and unordered lists. */
+.hamburger.is-active .bar {
+/*  visibility: hidden; (clicking on the space where the element is will trigger nothing)*/
+  opacity: 0;
+/*   (clicking on the space where the element is will be triggered)  */
+}
 
-Tables
-/*Basic styling for tables. */
+.mobile-nav{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  z-index:3;
+  background-color: blue;
+  padding-top:  65px;
+  margin-top:65px;
+  transition: 0.6s;
+}
 
-Borders
-/*Border styles and border-radius for rounded corners. */
+.mobile-nav.is-active{
+  left: 0;
+}
 
-Flexbox Utilities
-/*For aligning and distributing space among items. */
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  margin: 0 auto 16px;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px 16px;
+  background-color: white;
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight:bold;
+}
 
-Backgrounds
-/*Background color, images, and gradients. */
+.mobile-nav a:hover {
+  background-color: lightblue;
+}
 
-Positioning
-/*Relative, absolute, fixed positioning. */
+@media (max-width: 1046px){
+.nav-bar{
+    display: none; 
+  }
+}
 
-Icons
-/*Integration and styling of icon fonts or SVG icons. */
+@media (min-width: 1047px){
+.hamburger .bar, .hamburger::after, 
+.hamburger::before{
+    display: none; 
+  }
+}
 
-Alerts and Messages
-/*Styling for error, warning, and information messages. */
 
-Tooltips
-/*CSS for hover text hints. */
 
-Modals
-/*Styling for pop-up modals/dialogs. */
 
-Breadcrumbs
-/*Styling for navigational breadcrumbs. */
 
-Pagination
-/*CSS for pagination links. */
 
-Cards
-/*Design for content cards with image, text, etc. */
 
-Image_ Galleries
-/*Styles for image layouts. */
 
-Sliders/Carousels
-/*Styling for image sliders. */
 
-Tabs
-/*Styles for tabbed content navigation. */
 
-Accordions
-/*Styles for collapsible content panels. */
 
-Progress_ Bars
-/*Styles for linear progress indicators. */
+
