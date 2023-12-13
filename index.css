@@ -121,6 +121,7 @@ body {
   --purple: #9b27af;
   --gray: #747681;
   --black: #333;
+  --white: #fff;
   --font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
@@ -129,7 +130,7 @@ body {
 /* Path: html, body */
 /* Description: Base styles applied to the entire HTML document and the body. */
 html { 
-  background-color: #ffffff;
+  background-color: var(--white);
   font-size: 16px; 
   -moz-osx-font-smoothing: grayscale; 
   -webkit-font-smoothing: antialiased; 
@@ -147,6 +148,7 @@ body {
   font-size: 1em; 
   font-weight: 400; 
   line-height: 1.5; 
+  background-color: white;
 }
 
 body, button, input, optgroup, select, textarea { 
@@ -239,12 +241,6 @@ a:hover {
   width: auto; 
 }
 
-@media screen and (min-width: 1024px) { 
-  .container { 
-    max-width: 960px; 
-  } 
-}
-
 /* ********** Grid Layout Styles ********** */
 /* Path: Body -> Grid Layout */
 .flex-wrap { 
@@ -288,54 +284,6 @@ a:hover {
   top: 0; 
 }
 
-@media screen and (max-width: 668px) {
-  .screen-display-mobile-1-2-3-4-5-6-7-8-9, 
-  .screen-display-tablet-1-2-3-4-5-6-7-8-9, 
-  .screen-display-desktop-1-2-3-4-5-6-7-8-9 { 
-    flex: none; 
-    width: 100%; } 
-}
-
-@media screen and (max-width: 668px) {
-  .column.is-half-tablet { 
-    flex: none; 
-    width: 100%; } 
-}
-
-@media screen and (min-width: 669px), print { 
-  .column.is-half-tablet { 
-  flex: none; 
-  width: 50%; } 
-}
-
-@media screen and (max-width: 1023px) {
-
-}
-
-@media screen and (min-width: 1024px) { 
-  .column.is-one-third-desktop { 
-  flex: none; 
-  width: 33.3333%; 
-  }
-}
-
-@media screen and (max-width: 1215px) {
-
-}
-
-@media screen and (min-width: 1216px) { 
-  .is-size-4-widescreen { 
-  font-size: 3rem; 
-} 
-}
-
-@media screen and (max-width: 1407px) {
-
-}
-
-@media screen and (min-width: 1408px) {
-
-}
 
 
 /* ********** Image and Icon Styles ********** */
@@ -381,144 +329,7 @@ span { font-style: inherit; font-weight: inherit; }
   color: #141c3a; 
 }
 
-
-/* ********** Typography Styles - Responsive ********** */
-/* Path: Body -> Typography -> Responsive */
-@media screen and (max-width: 668px) { 
-  .is-size-4-mobile { font-size: 2rem; } 
-}
-
-@media screen and (min-width: 669px) and (max-width: 1023px){ 
-  .is-size-4-mobile { font-size: 2rem; } 
-}
-
-@media screen and (min-width: 1024px) { 
-  .is-size-3-desktop { font-size: 2rem; } 
-  .is-size-5-desktop { font-size: 1.25rem; 
-  } 
-}
-
-
-/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> First Section Styles (Projects) <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
-/* Path: Body -> Section (.projects) */
-/* This section includes styles specific to the .projects section, including grid, figures, captions, buttons, and overlays. */
-
-/* Project Grid Styles */
-/* Path: Body -> Section (.projects) -> Project Grid */
-/* Description: Styles for the project grid layout and responsive padding. */
-
-.projects { 
-  margin: 1rem;
-  padding: 1rem; 
-}
-.projects .project-grid { 
-  padding: 2rem 0 4rem; 
-}
-
-@media screen and (min-width: 669px) { 
-  .projects .project-grid { 
-    padding-top: 4rem; 
-    } 
-  }
-
-/* Figure and Image Styles */
-/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Image */
-/* Description: Default and hover styles for images within figures in the project grid. */
-.projects .project-grid figure img.project-thumb { 
-  -webkit-transform: scale(1); 
-  transform: scale(1); 
-  transition: .5s ease-in-out; 
-}
-
-.projects .project-grid figure:hover img { 
-  -webkit-transform: scale(1.25); 
-  transform: scale(1.25); 
-}
-
-/* Figure Styles */
-/* Path: Body -> Section (.projects) -> Project Grid -> Figure */
-/* Description: Positioning and styling for figures within the project grid. */
-.projects .project-grid figure { 
-  position: relative; 
-  overflow: hidden; 
-  border-radius: 12px; 
-}
-
-/* Figcaption Styles */
-/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption */
-/* Description: Default and responsive styles for captions within figures. */
-.projects .project-grid figure figcaption { 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  padding: 0rem 3rem; 
-  color: #ffffff; 
-  z-index: 1; 
-}
-
-@media screen and (min-width: 669px) { 
-  .projects .project-grid figure figcaption { 
-    padding: 0rem 2rem; 
-  } 
-}
-
-/* Title Styles in Figcaption */
-/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption -> Title */
-/* Description: Styling for titles within figcaptions. */
-.projects .project-grid figure figcaption h1.title { 
-  color: #ffffff; 
-  margin-bottom: 1.8rem; 
-  font-weight: 500; 
-}
-
-/* Button Styles in Figcaption */
-/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption -> Button */
-/* Description: Styles for buttons within figcaptions, including icons. */
-.projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded { 
-  margin: 0 auto; 
-  font-size: 18px; 
-  padding: 1.2rem; 
-  font-weight: 400; 
-  border-width: 2px; 
-  color: #ffffff; 
-}
-
-.projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded span.icon { 
-  margin-top: 4px; 
-  margin-left: 0px; 
-}
-
-/* Overlay Styles */
-/* Path: Body -> Section (.projects) -> Project Grid -> Overlay */
-/* Description: Default and hover styles for overlay effects within the project grid. */
-.projects .project-grid .overlay, 
-.projects .project-grid figcaption { 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  opacity: 0; 
-  transition: .45s ease-in-out; 
-}
-
-.projects .project-grid .overlay { 
-  background-color: #141c3a; 
-}
-
-.projects .project-grid figure:hover .overlay, 
-.projects .project-grid figure:hover figcaption { 
-  opacity: 1; 
-}
-
-
-
-/* FOOTER */
-
-
-
-
-/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Navigation Styling <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Section Styling (Navigation) <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
 header{
   background-color: blue;
   margin-top: 0;
@@ -533,7 +344,7 @@ body{
   background-color: lightblue;
 }
 
-.container{
+.contain{
   display: flex;
   justify-content: space-between;
   z-index:9;
@@ -600,7 +411,7 @@ body{
   text-align: center;
   margin: 0 auto 16px;
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
   padding: 12px 16px;
   background-color: white;
   text-decoration: none;
@@ -612,27 +423,203 @@ body{
   background-color: lightblue;
 }
 
-@media (max-width: 1046px){
-.nav-bar{
-    display: none; 
-  }
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Section Styling (Projects) <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+/* Path: Body -> Section (.projects) */
+/* This section includes styles specific to the .projects section, including grid, figures, captions, buttons, and overlays. */
+
+/* Project Grid Styles */
+/* Path: Body -> Section (.projects) -> Project Grid */
+/* Description: Styles for the project grid layout and responsive padding. */
+.projects { 
+  margin: 1rem;
+  padding: 1rem; 
+}
+.projects .project-grid { 
+  padding: 2rem 0 4rem; 
 }
 
-@media (min-width: 1047px){
-.hamburger .bar, .hamburger::after, 
-.hamburger::before{
-    display: none; 
-  }
+
+/* Figure and Image Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Image */
+/* Description: Default and hover styles for images within figures in the project grid. */
+.projects .project-grid figure img.project-thumb { 
+  -webkit-transform: scale(1); 
+  transform: scale(1); 
+  transition: .5s ease-in-out; 
+}
+
+.projects .project-grid figure:hover img { 
+  -webkit-transform: scale(1.25); 
+  transform: scale(1.25); 
+}
+
+/* Figure Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure */
+/* Description: Positioning and styling for figures within the project grid. */
+.projects .project-grid figure { 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 12px; 
+}
+
+/* Figcaption Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption */
+/* Description: Default and responsive styles for captions within figures. */
+.projects .project-grid figure figcaption { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 0rem 3rem; 
+  color: #ffffff; 
+  z-index: 1; 
+}
+
+/* Title Styles in Figcaption */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption -> Title */
+/* Description: Styling for titles within figcaptions. */
+.projects .project-grid figure figcaption h1.title { 
+  color: #ffffff; 
+  margin-bottom: 1.8rem; 
+  font-weight: 500; 
+}
+
+/* Button Styles in Figcaption */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption -> Button */
+/* Description: Styles for buttons within figcaptions, including icons. */
+.projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded { 
+  margin: 0 auto; 
+  font-size: 18px; 
+  padding: 1.2rem; 
+  font-weight: 400; 
+  border-width: 2px; 
+  color: #ffffff; 
+}
+
+.projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded span.icon { 
+  margin-top: 4px; 
+  margin-left: 0px; 
+}
+
+/* Overlay Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Overlay */
+/* Description: Default and hover styles for overlay effects within the project grid. */
+.projects .project-grid .overlay, 
+.projects .project-grid figcaption { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  opacity: 0; 
+  transition: .45s ease-in-out; 
+}
+
+.projects .project-grid .overlay { 
+  background-color: #141c3a; 
+}
+
+.projects .project-grid figure:hover .overlay, 
+.projects .project-grid figure:hover figcaption { 
+  opacity: 1; 
 }
 
 
 
+/* FOOTER */
+
+/* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> @media sizes <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
+
+/* ************************* max-width: 768px ************************* */
+@media screen and (max-width: 768px) {
+  /* Mobile Nav */
+  .nav-bar{
+    display: none; 
+  }
+/* Typography Styles - Responsive */
+/* Path: Body -> Typography -> Responsive */
+  .is-size-4-mobile { font-size: 2rem; 
+  } 
+
+  .screen-display-mobile-1-2-3-4-5-6-7-8-9, 
+  .screen-display-tablet-1-2-3-4-5-6-7-8-9, 
+  .screen-display-desktop-1-2-3-4-5-6-7-8-9 { 
+    flex: none; 
+    width: 100%; } 
+
+  .column.is-half-tablet { 
+    flex: none; 
+    width: 100%; } 
+}
+/* ************************* min-width: 769px ************************* */
+@media screen and (min-width: 769px), print { 
+  /* Mobile Nav */
+  .hamburger .bar, .hamburger::after, 
+  .hamburger::before{
+    display: none; 
+  }
+/* Figcaption Styles */
+/* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Figcaption */
+/* Description: Default and responsive styles for captions within figures. */
+  .projects .project-grid figure figcaption { 
+    padding: 0rem 2rem; 
+  } 
+/* Project Grid Styles */
+/* Path: Body -> Section (.projects) -> Project Grid */
+/* Description: Styles for the project grid layout and responsive padding. */
+  .projects .project-grid { 
+    padding-top: 4rem; 
+  }
+/* Typography Styles - Responsive */
+/* Path: Body -> Typography -> Responsive */
+  .is-size-4-mobile { font-size: 2rem; 
+  } 
+
+  .column.is-half-tablet { 
+  flex: none; 
+  width: 50%; } 
+}
+/* ************************* max-width: 1023px ************************* */
+@media screen and (max-width: 1023px) {
+/* Typography Styles - Responsive */
+/* Path: Body -> Typography -> Responsive */
+  .is-size-4-mobile { font-size: 2rem; } 
+}
+/* ************************* min-width: 1024px ************************* */
+@media screen and (min-width: 1024px) { 
+/* Container Styles */
+/* Path: Body -> Containers */ 
+  .container { 
+    max-width: 960px; 
+  } 
+/* Typography Styles - Responsive */
+/* Path: Body -> Typography -> Responsive */
+  .is-size-3-desktop { font-size: 2rem; } 
+  .is-size-5-desktop { font-size: 1.25rem; 
+  } 
 
 
+  .column.is-one-third-desktop { 
+  flex: none; 
+  width: 33.3333%; 
+  }
+}
+/* ************************* max-width: 1215px ************************* */
+@media screen and (max-width: 1215px) {
 
+}
+/* ************************* min-width: 1216px ************************* */
+@media screen and (min-width: 1216px) { 
+  .is-size-4-widescreen { 
+  font-size: 3rem; 
+} 
+}
+/* ************************* max-width: 1407px ************************* */
+@media screen and (max-width: 1407px) {
 
+}
+/* ************************* min-width: 1408px ************************* */
+@media screen and (min-width: 1408px) {
 
-
-
+}
 
 
