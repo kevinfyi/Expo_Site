@@ -163,35 +163,45 @@ a, .button {
   transition: all .2s ease-in-out; 
   -webkit-transition: all .2s ease-in-out; 
   font-weight: 400; 
-  color: #6495ED; 
+  color: #0000CD; 
   cursor: pointer; 
   text-decoration: none; 
 }
 
 .button {
+  display: inline-flex;
   align-items: center; 
-  border: 1px solid transparent; 
-  border-radius: 4px; 
-  box-shadow: none; 
-  display: inline-flex; 
-  font-size: 1rem; 
-  height: 2.5em; 
   justify-content: flex-start; 
+  border-radius: 50px; 
+  box-shadow: none; 
+  font-size: 1rem; 
+  height: 3em; 
+  width: 10em; 
   line-height: 1.5; 
+  border: 2px solid #0000CD; 
   padding-bottom: calc(0.5em - 1px); 
   padding-left: calc(0.75em - 1px); 
   padding-right: calc(0.75em - 1px); 
   padding-top: calc(0.5em - 1px); 
   position: relative; 
-  vertical-align: top; }
+  /* vertical-align: top;  */
+}
+
+figcaption .button{
+  color: white;
+}
+
+  /* .button .icon {
+  height: 1.5em; width: 1.5em; 
+} */
 
 a:hover { 
-  color: #0061ff; 
+  color: #0000CD; 
   font-weight: 600; 
 }
 
 .button:hover { 
-  background-color: #0061ff;
+  background-color: #0000CD;
   color: white; 
 }
 
@@ -244,19 +254,9 @@ a:hover {
 
 /* ********** Grid Layout Styles ********** */
 /* Path: Body -> Grid Layout */
-.flex-wrap { 
-  flex-wrap: wrap; 
-}
-
 .columns {
-  display: flex;
+  display: flex; flex-wrap: wrap; margin-left: -0.75rem; margin-right: -0.75rem; margin-top: -0.75rem; 
 }
-
-/* .columns { 
-  margin-left: -0.75rem; 
-  margin-right: -0.75rem; 
-  margin-top: -0.75rem; 
-} */
 
 .column { 
   display: block; 
@@ -295,7 +295,6 @@ img { height: auto; max-width: 100%; }
 
 .image img { display: block; height: auto; width: 100%; }
 
-.image img.btn-rounded { border-radius: 9999px; }
 .image.is-3by2 { padding-top: 66.6666%; }
 
 /* ********** Section Styling ********** */
@@ -303,11 +302,7 @@ img { height: auto; max-width: 100%; }
 /* Description: Styles for section elements. */
 .section { 
   padding: 5rem 1.5rem; 
-}
-
-.has-text-centered {
   text-align: center; 
-  
 }
 
 .is-size-5 { font-size: 1.25rem; 
@@ -324,6 +319,7 @@ span { font-style: inherit; font-weight: inherit; }
 
 .title { 
   color: #141c3a; 
+  font-weight: 800; 
 }
 
 /* ************************* >>>>>>>>>>>>>>>>>>>>>>>>> Section Styling (Navigation) <<<<<<<<<<<<<<<<<<<<<<<<< ************************* */
@@ -343,7 +339,7 @@ body{
   background-color: white;
 }
 
-.contain{
+.contain {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -437,6 +433,7 @@ body{
 }
 
 
+
 /* Figure and Image Styles */
 /* Path: Body -> Section (.projects) -> Project Grid -> Figure -> Image */
 /* Description: Default and hover styles for images within figures in the project grid. */
@@ -490,7 +487,7 @@ body{
   padding: 1.2rem; 
   font-weight: 400; 
   border-width: 2px; 
-  color: #ffffff; 
+  color: black; 
 }
 
 .projects .project-grid figure figcaption a.button.is-primary.btn-outlined.btn-rounded span.icon { 
@@ -521,6 +518,14 @@ body{
   opacity: 1; 
 }
 
+.projects .project-grid figure figcaption a.button.is-primary.is-outlined.is-rounded { /* .is-primary.is-outlined.is-rounded */
+  margin: 0 auto; 
+  font-size: 18px; 
+  padding: 1.2rem; 
+  font-weight: 400; 
+  border-width: 2px; 
+  color: #ffffff; 
+}
 
 
 /* FOOTER */
@@ -535,7 +540,7 @@ body{
   }
 /* Typography Styles - Responsive */
 /* Path: Body -> Typography -> Responsive */
-  .is-size-4-mobile { font-size: 2rem; 
+  .is-size-4-mobile { font-size: 2rem; /* title */
   } 
 
   .screen-display-mobile-1-2-3-4-5-6-7-8-9, 
@@ -544,7 +549,7 @@ body{
     flex: none; 
     width: 100%; } 
 
-  .column.is-half-tablet { 
+  .column.is-half-tablet { /* .column */
     flex: none; 
     width: 100%; } 
 }
@@ -590,11 +595,10 @@ body{
     max-width: 960px; 
   } 
 /* Typography Styles - Responsive */
-/* Path: Body -> Typography -> Responsive */
-  .is-size-3-desktop { font-size: 2rem; } 
-  .is-size-5-desktop { font-size: 1.25rem; 
+/* Path: Body -> Typography -> Responsive */ 
+  .is-size-3-desktop { font-size: 2rem; } /* title */
+  .is-size-5-desktop { font-size: 1.25rem; /* subtitle */
   } 
-
 
   .column.is-one-third-desktop { 
   flex: none; 
